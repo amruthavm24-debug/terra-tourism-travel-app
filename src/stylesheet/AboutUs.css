@@ -1,34 +1,38 @@
 .about {
-  height: 70vh;
+  min-height: 100vh;
   background-size: cover;
   background-position: center;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+
+  padding: 60px 20px;
 }
 
 .about-card {
-  width: 900px;
-  border-radius: 20px;
+  width: 90%;
+  max-width: 1200px;
   background: white;
-  padding: 40px;
-
-  display: flex;             
-  justify-content: space-between;
-  align-items: center;
-
-  gap: 50px;
-  overflow: hidden;
+  border-radius: 30px;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
-.about-card img {
+.about-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
   width: 100%;
-  object-fit: cover;
 }
 
 .about-content {
-  width: 50%;
+  flex: 1;
+  max-width: 500px;
 }
 
 .about-content h2 {
@@ -40,68 +44,56 @@
 .about-content p {
   line-height: 1.8;
   color: gray;
-  font-weight: 16px;
+  font-size: 18px;
+  text-align: left;
 }
 
 .about-images {
   position: relative;
-  width: 200px; 
-  height: 150px;
+
+  width: 350px;
+  height: 350px;
+
+  flex-shrink: 0;
+}
+
+.about-images img {
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .img1 {
-  object-fit: cover;
-  border-radius: 20px;
+  width: 260px;
+  height: 320px;
 }
 
 .img2 {
-  object-fit: cover;
-  border-radius: 20px;
-
+  width: 220px;
+  height: 250px;
   position: absolute;
-  bottom: -100px;
-  right: -80px;
-
-  transform: rotate(10deg);
-
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-.img3 {
-  object-fit: cover;
-  border-radius: 20px;
-
-  position: absolute;
-  bottom: 80px;
-  right: 90px;
-
-  transform: rotate(-10deg);
-
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  bottom: -30px;
+  right: -40px;
+  transform: rotate(8deg);
 }
 
 .img4 {
-  object-fit: cover;
-  border-radius: 20px;
-
+  width: 180px;
+  height: 120px;
   position: absolute;
-  bottom: 90px;
-  right: 80px;
-
-  transform: rotate(-10deg);
-
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  top: -20px;
+  right: 30px;
+  transform: rotate(-8deg);
 }
 
 .choose-us {
-  margin-top: 80px;
   text-align: center;
 }
 
 .choose-us h2 {
   font-size: 40px;
   margin-bottom: 40px;
-  color: white;
+  color: #0f4c75;
 }
 
 .choose-container {
@@ -114,7 +106,6 @@
   background: rgba(255,255,255,0.9);
   padding: 25px;
   border-radius: 20px;
-
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
@@ -126,4 +117,20 @@
 .choose-card p {
   color: #555;
   line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+
+  .about-top {
+    flex-direction: column;
+  }
+
+  .choose-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about-images {
+    width: 300px;
+    height: 300px;
+  }
 }
