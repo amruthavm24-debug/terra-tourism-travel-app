@@ -1,0 +1,52 @@
+.hero {
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* background: rgba(0, 0, 0, 0.4); */
+}
+
+.hero-content {
+  position: relative;
+  color: white;
+  text-align: center;
+  
+}
+
+.hero-content h1 {
+  color: black;
+  background: rgba(230, 221, 221, 0.4);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.hero-content p {
+  font-size: 20px;
+}
+
+.explore-btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(to right, #ffb347, #ffcc33); /* travel gold */
+  color: #333;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.explore-btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(to right, #ffcc33, #ffb347);
+}

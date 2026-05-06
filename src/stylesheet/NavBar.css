@@ -1,0 +1,37 @@
+.navbar {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  background: linear-gradient(to right, #11998e, #38ef7d);
+}
+
+.iconText {
+  display: flex;
+  align-items: center;
+  color: rgb(11, 11, 11);
+  gap: 5px;
+  font-size: 16px;  
+  font-style: italic;
+}
+
+.iconImg {
+  width: 40px;
+  height: 40px;
+}
+
+.navLinks {
+  margin-left: auto;
+  display: flex;
+  gap: 30px;
+}
+
+.navLinks a {
+  color: rgb(11, 11, 11);
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navLinks a:hover {
+  color: white;
+}

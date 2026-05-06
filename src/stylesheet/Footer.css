@@ -1,0 +1,44 @@
+.footer {
+  background: linear-gradient(to right, #0f4c75, #3282b8);
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+/* Heading */
+.footer h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+/* Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.social-icons span {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social-icons span:hover {
+  transform: scale(1.3);
+  color: #ffe082;
+}
+
+/* Divider */
+.footer hr {
+  margin: 20px auto;
+  width: 60%;
+  border: 0.5px solid rgba(255,255,255,0.3);
+}
+
+/* Text */
+.footer p {
+  font-size: 14px;
+  opacity: 0.8;
+}

@@ -1,0 +1,94 @@
+.about {
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.card {
+  width: 900px;
+  border-radius: 20px;
+  background: white;
+  padding: 40px;
+
+  display: flex;             
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 50px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.about-content {
+  width: 50%;
+}
+
+.about-content h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: rgb(49, 78, 243);
+}
+
+.about-content p {
+  line-height: 1.8;
+  color: gray;
+  font-weight: 16px;
+}
+
+.about-images {
+  position: relative;
+  width: 200px; 
+  height: 150px;
+}
+
+.img1 {
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.img2 {
+  object-fit: cover;
+  border-radius: 20px;
+
+  position: absolute;
+  bottom: -100px;
+  right: -80px;
+
+  transform: rotate(10deg);
+
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.img3 {
+  object-fit: cover;
+  border-radius: 20px;
+
+  position: absolute;
+  bottom: 80px;
+  right: 90px;
+
+  transform: rotate(-10deg);
+
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.img4 {
+  object-fit: cover;
+  border-radius: 20px;
+
+  position: absolute;
+  bottom: 90px;
+  right: 80px;
+
+  transform: rotate(-10deg);
+
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
