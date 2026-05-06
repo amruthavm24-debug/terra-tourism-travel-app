@@ -9,7 +9,7 @@ import "../stylesheet/AboutUs.css";
 export default function AboutUs() {
   return (
     <div className='about' style={{backgroundImage:`url(${bg})`}}>
-        <div className='card'>
+        <div className='about-card'>
           <div className='about-content'>
             <h2>About Us</h2>
                 <p>

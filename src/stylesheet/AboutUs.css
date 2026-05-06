@@ -8,7 +8,7 @@
   position: relative;
 }
 
-.card {
+.about-card {
   width: 900px;
   border-radius: 20px;
   background: white;
@@ -22,7 +22,7 @@
   overflow: hidden;
 }
 
-.card img {
+.about-card img {
   width: 100%;
   object-fit: cover;
 }
