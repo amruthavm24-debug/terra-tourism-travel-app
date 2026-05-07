@@ -3,7 +3,6 @@ import bg from '../assets/AboutUs_Background.jpg'
 import img1 from '../assets/AboutUs_Image1.jpg'
 import img2 from '../assets/AboutUs_Image2.jpg'
 import img4 from '../assets/AboutUs_Image4.jpg'
-
 import "../stylesheet/AboutUs.css";
 
 export default function AboutUs() {
