@@ -9,7 +9,7 @@ export default function NavBar() {
 
       <h1 className='iconText'>
                 <img src={icon} className="iconImg" alt="logo"></img>
-                Terra <br/> Tourism & Travel
+                TERRA <br/> Tourism & Travel
         </h1>
       
       <div className='navLinks'>
