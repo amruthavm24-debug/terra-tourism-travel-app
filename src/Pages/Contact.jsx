@@ -7,22 +7,38 @@ export default function Contact() {
     <div className='contact' style={{ backgroundImage: `url(${bg})` }}>
       <h2>Start Your Journey With Us</h2>
       <p>Your dream destination is just one message away.</p>
+      <div className='contact-container'>        
 
-      <div className='contact-form'>
+        <div className="contact-info">
 
-        <label>Full Name</label>
-        <input type='text' placeholder='Your Name'></input>
+            <h3>Contact Information</h3>
+            <p>📞 +91 98765 43210</p>
+            <p>📧 terratourism@gmail.com</p>
+            <p>📍 Kuala Lumpur, Malaysia</p>
+            
+            <div className="social-links">
+              <a href="#">🌐</a>
+              <a href="#">📘</a>
+              <a href="#">📷</a>
+            </div>
 
-        <label>Email Address</label>
-        <input type='email' placeholder='Email Address'></input>
+          </div>
 
-        <label>Your Message</label>
-        <textarea  placeholder='Type Here' rows="5"></textarea>
+          <div className='contact-form'>
 
-        <button>Send Now</button>
+            <label>Full Name</label>
+            <input type='text' placeholder='Your Name'></input>
 
+            <label>Email Address</label>
+            <input type='email' placeholder='Email Address'></input>
+
+            <label>Your Message</label>
+            <textarea  placeholder='Type Here' rows="5"></textarea>
+
+            <button>Send Now</button>
+
+        </div>
       </div>
-
       <div className="map-container">
 
         <iframe 
