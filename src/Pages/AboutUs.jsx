@@ -15,10 +15,8 @@ export default function AboutUs() {
 
       <div className='about-card'>
 
-        {/* TOP SECTION */}
         <div className='about-top'>
-
-          {/* LEFT TEXT */}
+         
           <div className='about-content'>
 
             <h2>About Us</h2>
@@ -38,41 +36,22 @@ export default function AboutUs() {
 
           </div>
 
-          {/* RIGHT IMAGES */}
           <div className="about-images">
+            <img src={img1} alt="travel" className="img1"/>
 
-            <img
-              src={img1}
-              alt="travel"
-              className="img1"
-            />
+            <img src={img2} alt="travel" className="img2"/>
 
-            <img
-              src={img2}
-              alt="travel"
-              className="img2"
-            />
-
-            <img
-              src={img4}
-              alt="travel"
-              className="img4"
-            />
-
+            <img src={img4} alt="travel" className="img4" />
           </div>
 
         </div>
 
-        {/* WHY CHOOSE US */}
         <div className="choose-us">
 
           <h2>Why Choose Us</h2>
-
           <div className="choose-container">
-
             <div className="choose-card">
               <h3>✈️ Best Travel Experience</h3>
-
               <p>
                 Enjoy unforgettable journeys with carefully planned tours.
               </p>
@@ -80,7 +59,6 @@ export default function AboutUs() {
 
             <div className="choose-card">
               <h3>💰 Affordable Packages</h3>
-
               <p>
                 Travel the world with budget-friendly and flexible packages.
               </p>
@@ -88,7 +66,6 @@ export default function AboutUs() {
 
             <div className="choose-card">
               <h3>🌍 Worldwide Destinations</h3>
-
               <p>
                 Explore beautiful destinations across the globe.
               </p>
@@ -96,7 +73,6 @@ export default function AboutUs() {
 
             <div className="choose-card">
               <h3>🛡️ Safe & Trusted</h3>
-
               <p>
                 Your safety and comfort are always our top priorities.
               </p>
