@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import "../stylesheet/Register.css";
 import bg from '../assets/SignIn_Background.jpg'
+import { useNavigate } from 'react-router-dom';
 
 export default function SigninForm() {
 
@@ -11,6 +12,8 @@ export default function SigninForm() {
   const [password, setPassword] = useState("");
 
   const [confirmPassword, setConfirmPassword] = useState("");
+
+  const navigate = useNavigate();
 
   const handleregister = ()=>{
 
@@ -24,22 +27,21 @@ export default function SigninForm() {
       return;
     }
 
-    const user ={
-      name : name,
-      email : email,
-      password : password
-    };
+    const user ={name : name, email : email, password : password };
 
-    localStorage.setItem(
-      "user",JSON.stringify(user)
-    );
+    localStorage.setItem("user",JSON.stringify(user));
+
+    localStorage.setItem("isLoggedIn", "true" );
 
     alert("Registration Successful ✅");
 
-    setName();
-    setEmail();
-    setPassword();
-    setConfirmPassword();
+    setName("");
+    setEmail("");
+    setPassword("");
+    setConfirmPassword("");
+
+     navigate("/");
+     window.location.reload();
   };
 
   return (

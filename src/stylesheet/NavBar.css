@@ -35,3 +35,16 @@
 .navLinks a:hover {
   color: white;
 }
+
+.logout-btn {
+  background: none;
+  border: none;
+  color: rgb(35, 35, 99);
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  color: white;
+}
