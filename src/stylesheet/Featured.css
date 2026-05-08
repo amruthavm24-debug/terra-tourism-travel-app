@@ -1,46 +1,133 @@
 .featured {
-  padding: 30px 20px;
+  padding: 60px 20px;
   text-align: center;
   background: #f9f9f9;
+  box-sizing: border-box;
 }
 
 .featured h2 {
-  font-size: 32px;
-  margin-bottom: 30px;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #222;
 }
 
 .featured-card-container {
   display: grid;
-  grid-template-columns: repeat(3, 300px);
-  justify-content: center;
+
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
   gap: 30px;
+
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
 }
 
 .featured-card {
-  width: 300px;
-  border-radius: 15px;
+  width: 100%;
+
+  border-radius: 18px;
   overflow: hidden;
+
   background: white;
+
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 
   text-align: center;
+
+  transition: 0.3s ease;
 }
 
 .featured-card img {
-   width: 100%;
+  width: 100%;
   height: 220px;
   object-fit: cover;
+  display: block;
 }
 
 .featured-card h3 {
-  margin: 10px 0;
+  margin: 18px 0 10px;
+  font-size: 22px;
+  color: #222;
 }
 
 .featured-card p {
   color: gray;
-  padding-bottom: 15px;
+  padding: 0 15px 20px;
+  line-height: 1.6;
+  font-size: 16px;
 }
 
 .featured-card:hover {
   transform: translateY(-10px);
+}
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .featured {
+    padding: 50px 15px;
+  }
+
+  .featured h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  .featured-card-container {
+    gap: 25px;
+  }
+
+  .featured-card img {
+    height: 200px;
+  }
+
+  .featured-card h3 {
+    font-size: 20px;
+  }
+
+  .featured-card p {
+    font-size: 15px;
+  }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 480px) {
+
+  .featured {
+    padding: 40px 12px;
+  }
+
+  .featured h2 {
+    font-size: 26px;
+  }
+
+  .featured-card-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .featured-card {
+    border-radius: 15px;
+  }
+
+  .featured-card img {
+    height: 180px;
+  }
+
+  .featured-card h3 {
+    font-size: 18px;
+  }
+
+  .featured-card p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
 }

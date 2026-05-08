@@ -8,6 +8,8 @@
   flex-direction: column;
 
   padding: 60px 20px;
+
+  box-sizing: border-box;
 }
 
 .gallary h2 {
@@ -16,6 +18,8 @@
   font-size: 42px;
 
   margin-bottom: 15px;
+
+  text-align: center;
 }
 
 .gallary p {
@@ -25,22 +29,28 @@
   margin-bottom: 40px;
 
   text-align: center;
+  line-height: 1.7;
+
+  max-width: 700px;
 }
 
 .gallary-card-container {
   display: grid;
 
-  grid-template-columns: repeat(3, 300px);
-
-  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 
   gap: 30px;
+
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
 }
 
 .gallary-card {
   position: relative;
 
-  width: 300px;
+  width: 100%;
   height: 250px;
 
   border-radius: 20px;
@@ -49,7 +59,7 @@
 
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 
-  transition: 0.4s;
+  transition: 0.4s ease;
 }
 
 .gallary-card:hover {
@@ -62,7 +72,9 @@
 
   object-fit: cover;
 
-  transition: 0.5s;
+  transition: 0.5s ease;
+
+  display: block;
 }
 
 .gallary-card:hover img {
@@ -85,22 +97,90 @@
   );
 
   color: white;
+
+  box-sizing: border-box;
 }
 
 .gallary-overlay h3 {
   margin-bottom: 5px;
+  font-size: 22px;
 }
 
 .gallary-overlay span {
   font-size: 14px;
-
   color: #ddd;
 }
 
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
 @media (max-width: 768px) {
+
+  .gallary {
+    padding: 50px 15px;
+  }
+
+  .gallary h2 {
+    font-size: 32px;
+  }
+
+  .gallary p {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .gallary-card-container {
+    gap: 25px;
+  }
+
+  .gallary-card {
+    height: 230px;
+  }
+
+  .gallary-overlay h3 {
+    font-size: 20px;
+  }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 480px) {
+
+  .gallary {
+    padding: 40px 12px;
+  }
+
+  .gallary h2 {
+    font-size: 28px;
+  }
+
+  .gallary p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
 
   .gallary-card-container {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
+  .gallary-card {
+    height: 200px;
+    border-radius: 15px;
+  }
+
+  .gallary-overlay {
+    padding: 15px;
+  }
+
+  .gallary-overlay h3 {
+    font-size: 18px;
+  }
+
+  .gallary-overlay span {
+    font-size: 13px;
+  }
 }

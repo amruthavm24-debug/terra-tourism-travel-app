@@ -1,52 +1,141 @@
 .hero {
-  height: 70vh;
+  min-height: 70vh;
+
   background-size: cover;
   background-position: center;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   position: relative;
+
+  padding: 20px;
+
+  box-sizing: border-box;
 }
 
 .hero::before {
   content: "";
+
   position: absolute;
   inset: 0;
+
   /* background: rgba(0, 0, 0, 0.4); */
 }
 
 .hero-content {
   position: relative;
+
   color: white;
   text-align: center;
-  
+
+  max-width: 800px;
+
+  z-index: 1;
 }
 
 .hero-content h1 {
   color: black;
+
   background: rgba(230, 221, 221, 0.4);
-  padding: 10px 20px;
-  border-radius: 10px;
+
+  padding: 15px 25px;
+
+  border-radius: 12px;
+
+  font-size: 52px;
+  line-height: 1.3;
+
+  margin-bottom: 20px;
 }
 
 .hero-content p {
   font-size: 20px;
+  line-height: 1.7;
+
+  padding: 0 10px;
 }
 
 .explore-btn {
-  margin-top: 20px;
-  padding: 12px 25px;
+  margin-top: 25px;
+
+  padding: 14px 30px;
+
   font-size: 16px;
   font-weight: bold;
+
   border: none;
   border-radius: 30px;
-  background: linear-gradient(to right, #ffb347, #ffcc33); /* travel gold */
+
+  background: linear-gradient(to right, #ffb347, #ffcc33);
+
   color: #333;
+
   cursor: pointer;
-  transition: 0.3s;
+
+  transition: 0.3s ease;
 }
 
 .explore-btn:hover {
-  transform: scale(1.1);
+  transform: scale(1.08);
+
   background: linear-gradient(to right, #ffcc33, #ffb347);
+}
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .hero {
+    min-height: 60vh;
+    padding: 20px 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+    padding: 12px 20px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+  }
+
+  .explore-btn {
+    padding: 12px 25px;
+    font-size: 15px;
+  }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 480px) {
+
+  .hero {
+    min-height: 55vh;
+  }
+
+  .hero-content h1 {
+    font-size: 30px;
+    padding: 10px 15px;
+    border-radius: 10px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .explore-btn {
+    width: 100%;
+    max-width: 250px;
+
+    padding: 12px;
+
+    font-size: 15px;
+  }
 }

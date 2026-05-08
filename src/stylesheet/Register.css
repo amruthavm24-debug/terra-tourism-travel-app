@@ -1,53 +1,179 @@
 .register {
-  height: 100vh;
+  min-height: 100vh;
+
   background-size: cover;
   background-position: center;
+
   position: relative;
+
+  padding: 20px;
+
+  box-sizing: border-box;
 }
 
 .register-overlay {
-  height: 100%;
+  min-height: 100vh;
   width: 100%;
+
   /* background: rgba(0, 0, 0, 0.5); */
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  padding: 20px;
+
+  box-sizing: border-box;
 }
 
 .register-form {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 30px;
-  border-radius: 15px;
-  width: 50%;
+  background: rgba(255, 255, 255, 0.92);
+
+  padding: 40px;
+
+  border-radius: 20px;
+
+  width: 100%;
+  max-width: 550px;
+
   display: flex;
   flex-direction: column;
+
   gap: 15px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+  box-sizing: border-box;
+}
+
+.register-form h2 {
+  text-align: center;
+  margin-bottom: 10px;
+
+  color: #333;
+
+  font-size: 32px;
 }
 
 .register-form label {
-  margin-bottom: -8px;
   font-weight: 600;
+
   text-align: left;
-  color: black;
+
+  color: #222;
+
+  margin-bottom: -5px;
 }
 
 .register-form input {
-  padding: 12px;
-  border-radius: 8px;
-  border: none;
-  margin-bottom: 10px;
+  width: 100%;
+
+  padding: 14px;
+
+  border-radius: 10px;
+
+  border: 1px solid #ccc;
+
+  font-size: 16px;
+
+  outline: none;
+
+  box-sizing: border-box;
+}
+
+.register-form input:focus {
+  border-color: #ffb347;
 }
 
 .register-form button {
-  padding: 10px;
+  margin-top: 10px;
+
+  padding: 14px;
+
   border: none;
+
   background: #ffb347;
-  border-radius: 8px;
+
+  border-radius: 10px;
+
   cursor: pointer;
+
   font-weight: bold;
+  font-size: 16px;
+
+  color: white;
+
+  transition: 0.3s ease;
 }
 
 .register-form button:hover {
   background: #ffcc33;
+
+  transform: translateY(-2px);
+}
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .register {
+    padding: 15px;
+  }
+
+  .register-overlay {
+    padding: 15px;
+  }
+
+  .register-form {
+    padding: 30px;
+  }
+
+  .register-form h2 {
+    font-size: 28px;
+  }
+
+  .register-form input {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .register-form button {
+    padding: 12px;
+    font-size: 15px;
+  }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 480px) {
+
+  .register-form {
+    padding: 24px 18px;
+
+    border-radius: 15px;
+  }
+
+  .register-form h2 {
+    font-size: 24px;
+  }
+
+  .register-form label {
+    font-size: 14px;
+  }
+
+  .register-form input {
+    padding: 10px;
+
+    font-size: 14px;
+  }
+
+  .register-form button {
+    padding: 11px;
+
+    font-size: 14px;
+  }
 }

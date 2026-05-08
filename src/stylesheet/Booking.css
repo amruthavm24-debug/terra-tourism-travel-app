@@ -1,45 +1,149 @@
 .booking {
-  height: 100vh;
+  min-height: 100vh;
   background-size: cover;
   background-position: center;
   position: relative;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .booking-overlay {
-  height: 100%;
+  min-height: 100vh;
   width: 100%;
   /* background: rgba(0, 0, 0, 0.5); */
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .booking-form {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 30px;
-  border-radius: 15px;
-  width: 320px;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 35px;
+  border-radius: 20px;
+
+  width: 100%;
+  max-width: 420px;
+
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 18px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  box-sizing: border-box;
 }
 
-.booking-form input {
-  padding: 10px;
-  border-radius: 8px;
-  border: none;
+.booking-form h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 32px;
+}
+
+.booking-form input,
+.booking-form textarea,
+.booking-form select {
+  width: 100%;
+  padding: 14px;
+
+  border-radius: 10px;
+  border: 1px solid #ddd;
+
+  font-size: 16px;
+  outline: none;
+
+  box-sizing: border-box;
+}
+
+.booking-form input:focus,
+.booking-form textarea:focus,
+.booking-form select:focus {
+  border-color: #ffb347;
 }
 
 .booking-form button {
-  padding: 10px;
+  padding: 14px;
   border: none;
+
   background: #ffb347;
-  border-radius: 8px;
+  color: white;
+
+  border-radius: 10px;
   cursor: pointer;
+
   font-weight: bold;
+  font-size: 16px;
+
+  transition: 0.3s ease;
 }
 
 .booking-form button:hover {
   background: #ffcc33;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+  .booking {
+    padding: 15px;
+  }
+
+  .booking-overlay {
+    padding: 15px;
+  }
+
+  .booking-form {
+    max-width: 100%;
+    padding: 28px;
+  }
+
+  .booking-form h2 {
+    font-size: 28px;
+  }
+
+  .booking-form input,
+  .booking-form textarea,
+  .booking-form select {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .booking-form button {
+    padding: 12px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .booking-form {
+    padding: 22px 18px;
+    border-radius: 15px;
+  }
+
+  .booking-form h2 {
+    font-size: 24px;
+  }
+
+  .booking-form input,
+  .booking-form textarea,
+  .booking-form select {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .booking-form button {
+    font-size: 15px;
+    padding: 11px;
+  }
 }

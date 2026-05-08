@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import "../stylesheet/NavBar.css"
-import icon from '../assets/icon.jpg'
+import logo from '../assets/icon.jpg'
 
 export default function NavBar() {
 
@@ -21,10 +21,21 @@ export default function NavBar() {
   return (
     <div className='navbar'>
 
-      <h1 className='iconText'>
-                <img src={icon} className="iconImg" alt="logo"></img>
-                TERRA <br/> Tourism & Travel
-        </h1>
+      <div className="iconText">
+
+        <img src={logo} alt="" className="iconImg" />
+
+        <div className="logoText">
+          
+          <h2>
+            <span className="terra">Terra</span>
+          </h2>
+
+          <p>Tourism & Travel</p>
+
+        </div>
+
+      </div>
       
       <div className='navLinks'>
         <Link to="/">Home</Link>

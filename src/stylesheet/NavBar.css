@@ -1,35 +1,104 @@
+/* =========================
+   NAVBAR
+========================= */
+
 .navbar {
-  height: 45px;
+  min-height: 70px;
+
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 5px 20px;
+
+  padding: 10px 25px;
+
   background: linear-gradient(to right, #119979, #09e95e);
+
+  box-sizing: border-box;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
+
+/* =========================
+   LOGO SECTION
+========================= */
 
 .iconText {
   display: flex;
   align-items: center;
-  color: rgb(35, 35, 99);
-  gap: 5px;
-  font-size: 18px;  
-  /* font-style: italic; */
+
+  gap: 12px;
+
+  flex-shrink: 0;
 }
 
 .iconImg {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
+
+  object-fit: cover;
 }
 
-.navLinks {
-  margin-left: auto;
+/* Logo Text */
+
+.logoText {
   display: flex;
+  flex-direction: column;
+
+  line-height: 1.1;
+}
+
+.logoText h2 {
+  margin: 0;
+
+  font-size: 30px;
+  font-weight: 800;
+
+  color: rgb(35, 35, 99);
+}
+
+.terra {
+  color: #ffe082;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.logoText p {
+  margin: 0;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  color: rgb(35, 35, 99);
+
+  letter-spacing: 0.5px;
+}
+
+/* =========================
+   NAV LINKS
+========================= */
+
+.navLinks {
+  display: flex;
+  align-items: center;
+
   gap: 30px;
+
+  flex-wrap: wrap;
 }
 
 .navLinks a {
   color: rgb(35, 35, 99);
+
   text-decoration: none;
-  font-size: 16px;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
 }
 
 .navLinks a:hover {
@@ -39,12 +108,95 @@
 .logout-btn {
   background: none;
   border: none;
+
   color: rgb(35, 35, 99);
-  font-size: 16px;
+
+  font-size: 17px;
+  font-weight: 600;
+
   cursor: pointer;
-  transition: 0.3s;
+
+  transition: 0.3s ease;
 }
 
 .logout-btn:hover {
   color: white;
+}
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+
+    gap: 15px;
+
+    padding: 15px;
+  }
+
+  .iconImg {
+    width: 45px;
+    height: 45px;
+  }
+
+  .logoText h2 {
+    font-size: 26px;
+  }
+
+  .logoText p {
+    font-size: 12px;
+  }
+
+  .navLinks {
+    justify-content: center;
+
+    gap: 20px;
+  }
+
+  .navLinks a,
+  .logout-btn {
+    font-size: 16px;
+  }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 480px) {
+
+  .navbar {
+    padding: 12px 10px;
+  }
+
+  .iconText {
+    gap: 8px;
+  }
+
+  .iconImg {
+    width: 38px;
+    height: 38px;
+  }
+
+  .logoText h2 {
+    font-size: 22px;
+  }
+
+  .logoText p {
+    font-size: 10px;
+  }
+
+  .navLinks {
+    gap: 15px;
+
+    justify-content: center;
+  }
+
+  .navLinks a,
+  .logout-btn {
+    font-size: 14px;
+  }
 }

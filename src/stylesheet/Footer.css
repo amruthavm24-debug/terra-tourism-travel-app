@@ -2,27 +2,39 @@
   background: linear-gradient(to right, #103e5d, #3282b8);
   color: white;
   text-align: center;
-  padding: 30px 20px;
+
+  padding: 40px 20px;
+
+  box-sizing: border-box;
 }
 
 /* Heading */
+
 .footer h3 {
-  margin-bottom: 10px;
-  font-size: 20px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 /* Icons */
+
 .social-icons {
   display: flex;
   justify-content: center;
+  align-items: center;
+
   gap: 30px;
-  font-size: 24px;
-  margin-bottom: 15px;
+
+  font-size: 26px;
+
+  margin-bottom: 20px;
+
+  flex-wrap: wrap;
 }
 
 .social-icons span {
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .social-icons span:hover {
@@ -31,14 +43,76 @@
 }
 
 /* Divider */
+
 .footer hr {
   margin: 20px auto;
   width: 60%;
+  max-width: 500px;
+
   border: 0.5px solid rgba(255,255,255,0.3);
 }
 
 /* Text */
+
 .footer p {
-  font-size: 14px;
-  opacity: 0.8;
+  font-size: 15px;
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .footer {
+    padding: 35px 15px;
+  }
+
+  .footer h3 {
+    font-size: 22px;
+  }
+
+  .social-icons {
+    gap: 22px;
+    font-size: 24px;
+  }
+
+  .footer hr {
+    width: 80%;
+  }
+
+  .footer p {
+    font-size: 14px;
+  }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 480px) {
+
+  .footer {
+    padding: 30px 12px;
+  }
+
+  .footer h3 {
+    font-size: 20px;
+  }
+
+  .social-icons {
+    gap: 18px;
+    font-size: 22px;
+  }
+
+  .footer hr {
+    width: 90%;
+  }
+
+  .footer p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
 }
