@@ -1,8 +1,10 @@
 import React from 'react'
 import "../stylesheet/SignIn.css";
 import bg from '../assets/SignIn_Background.jpg'
+import { useNavigate } from 'react-router-dom';
 
 export default function SignIn() {
+  const navigate = useNavigate();
   return (
     <div className='signin' >
 
@@ -33,7 +35,7 @@ export default function SignIn() {
               <div className="line"></div>
             </div>
 
-            <button> Register </button>
+            <button  onClick={()=> navigate("/register")}>Register</button>
 
           </div>
       </div>

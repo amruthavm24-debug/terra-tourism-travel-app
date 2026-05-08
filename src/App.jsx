@@ -8,7 +8,7 @@ import Contact from './Pages/Contact'
 import SignIn from './Pages/SignIn'
 import Footer from './components/Footer'
 import Booking from './Pages/Booking'
-
+import Register from './Pages/Register'
 
 function App() {
 
@@ -23,6 +23,7 @@ function App() {
           <Route path="/contact" element={<Contact/>}></Route>
           <Route path="/signin" element={<SignIn/>}></Route>
           <Route path="/booking" element={<Booking/>}></Route>
+          <Route path="/register" element={<Register/>}></Route>
         </Routes>
         <Footer/>
       </HashRouter>
