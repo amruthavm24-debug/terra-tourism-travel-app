@@ -1,86 +1,102 @@
 .hero {
   min-height: 70vh;
-
   background-size: cover;
   background-position: center;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   position: relative;
-
   padding: 20px;
-
   box-sizing: border-box;
 }
 
 .hero::before {
   content: "";
-
   position: absolute;
   inset: 0;
-
-  /* background: rgba(0, 0, 0, 0.4); */
 }
 
 .hero-content {
   position: relative;
-
   color: white;
   text-align: center;
-
-  max-width: 800px;
-
+  max-width: 850px;
   z-index: 1;
 }
 
 .hero-content h1 {
   color: black;
-
-  background: rgba(230, 221, 221, 0.4);
-
+  background: rgba(230, 221, 221, 0.45);
   padding: 15px 25px;
-
   border-radius: 12px;
-
   font-size: 52px;
   line-height: 1.3;
-
   margin-bottom: 20px;
 }
 
 .hero-content p {
   font-size: 20px;
   line-height: 1.7;
-
   padding: 0 10px;
+  margin-bottom: 20px;
 }
 
 .explore-btn {
-  margin-top: 25px;
-
-  padding: 14px 30px;
-
+  padding: 14px 32px;
   font-size: 16px;
   font-weight: bold;
-
   border: none;
   border-radius: 30px;
-
   background: linear-gradient(to right, #ffb347, #ffcc33);
-
   color: #333;
-
   cursor: pointer;
-
   transition: 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .explore-btn:hover {
   transform: scale(1.08);
-
   background: linear-gradient(to right, #ffcc33, #ffb347);
+}
+
+.search-box {
+  position: relative;
+  width: 420px;
+  max-width: 100%;
+  margin: 25px auto 0;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 16px 60px 16px 22px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  font-size: 15px;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-sizing: border-box;
+}
+
+.search-btn {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(to right, #04f962, #22914c);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.search-btn:hover {
+  background: linear-gradient(to right, #3A6073, #16222A);
+  transform: translateY(-50%) scale(1.05);
 }
 
 /* =========================
@@ -106,6 +122,10 @@
   .explore-btn {
     padding: 12px 25px;
     font-size: 15px;
+  }
+
+  .search-box {
+    width: 350px;
   }
 }
 
@@ -133,9 +153,22 @@
   .explore-btn {
     width: 100%;
     max-width: 250px;
-
     padding: 12px;
-
     font-size: 15px;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .search-box input {
+    padding: 14px 55px 14px 18px;
+    font-size: 14px;
+  }
+
+  .search-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
   }
 }

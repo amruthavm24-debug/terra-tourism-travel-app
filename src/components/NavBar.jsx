@@ -28,7 +28,7 @@ export default function NavBar() {
         <div className="logoText">
           
           <h2>
-            <span className="terra">Terra</span>
+            <span className="terra">TERRA</span>
           </h2>
 
           <p>Tourism & Travel</p>

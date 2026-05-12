@@ -68,22 +68,21 @@
 
 .signin-text {
   position: absolute;
-
   bottom: 40px;
   left: 30px;
-
-  color: white;
+  /* color: white; */
 }
 
 .signin-text h2 {
   font-size: 40px;
-
+   color: white;
   margin-bottom: 10px;
 }
 
 .signin-text p {
   font-size: 18px;
   line-height: 1.5;
+  color: rgb(222, 218, 218);
 }
 
 .signin-form {

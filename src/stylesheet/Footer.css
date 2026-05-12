@@ -1,5 +1,10 @@
 .footer {
-  background: linear-gradient(to right, #103e5d, #3282b8);
+   background: linear-gradient(
+    to right,
+    #051147,
+    #091e7d,
+    #0c269e
+  );
   color: white;
   text-align: center;
 

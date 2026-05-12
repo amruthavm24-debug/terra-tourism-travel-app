@@ -11,7 +11,7 @@
 
   padding: 10px 25px;
 
-  background: linear-gradient(to right, #119979, #09e95e);
+  background: linear-gradient(to left, #04f962, #22914c);
 
   box-sizing: border-box;
 
@@ -59,10 +59,10 @@
 }
 
 .terra {
-  color: #ffe082;
-
+  background: linear-gradient(to right, #051147, #091e7d, #0c269e, #1034d0);
+  -webkit-background-clip: text;  
+  -webkit-text-fill-color: transparent;
   font-weight: 900;
-
   letter-spacing: 1px;
 }
 
