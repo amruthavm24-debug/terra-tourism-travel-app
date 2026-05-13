@@ -3,8 +3,11 @@
 import React from 'react'
 import "../stylesheet/Booking.css";
 import bg from "../assets/Booking_Background.jpg";
+import { useNavigate } from 'react-router-dom';
 
 export default function Booking() {
+
+  const navigate = useNavigate();
 
   return (
 
@@ -80,7 +83,7 @@ export default function Booking() {
 
           </div>
           
-          <button> Submit </button>
+          <button onClick={()=> navigate("/")}> Submit </button>
 
         </div>
 
