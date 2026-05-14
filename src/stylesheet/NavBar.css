@@ -71,8 +71,9 @@
 
   font-size: 13px;
   font-weight: 500;
+  font-style: italic;
 
-  color: rgb(35, 35, 99);
+  color: white;
 
   letter-spacing: 0.5px;
 }
