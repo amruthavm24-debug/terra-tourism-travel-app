@@ -11,13 +11,23 @@
 
   padding: 10px 25px;
 
-  background: linear-gradient(to left, #04f962, #22914c);
+  background: linear-gradient(
+    to left,
+    #04f962,
+    #17c95b,
+    #22914c
+  );
 
   box-sizing: border-box;
 
   position: sticky;
   top: 0;
+
   z-index: 1000;
+
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 /* =========================
@@ -31,16 +41,24 @@
   gap: 12px;
 
   flex-shrink: 0;
+
+  cursor: pointer;
 }
+
+/* LOGO IMAGE */
 
 .iconImg {
   width: 50px;
   height: 50px;
 
   object-fit: cover;
+
+  border-radius: 50%;
+
+  transition: 0.4s ease;
 }
 
-/* Logo Text */
+/* LOGO TEXT */
 
 .logoText {
   display: flex;
@@ -54,23 +72,36 @@
 
   font-size: 30px;
   font-weight: 800;
-
-  color: rgb(35, 35, 99);
 }
+
+/* TERRA GRADIENT */
 
 .terra {
-  background: linear-gradient(to right, #051147, #091e7d, #0c269e, #1034d0);
-  -webkit-background-clip: text;  
+  background: linear-gradient(
+    to right,
+    #051147,
+    #091e7d,
+    #0c269e,
+    #1034d0
+  );
+
+  -webkit-background-clip: text;
+
   -webkit-text-fill-color: transparent;
+
   font-weight: 900;
+
   letter-spacing: 1px;
 }
+
+/* SUBTEXT */
 
 .logoText p {
   margin: 0;
 
   font-size: 13px;
   font-weight: 500;
+
   font-style: italic;
 
   color: white;
@@ -91,7 +122,11 @@
   flex-wrap: wrap;
 }
 
+/* LINKS */
+
 .navLinks a {
+  position: relative;
+
   color: rgb(35, 35, 99);
 
   text-decoration: none;
@@ -102,11 +137,67 @@
   transition: 0.3s ease;
 }
 
+/* HOVER EFFECT */
+
 .navLinks a:hover {
   color: white;
+
+  transform: translateY(-2px);
 }
 
+/* UNDERLINE */
+
+.navLinks a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -5px;
+
+  width: 0%;
+  height: 2px;
+
+  background: white;
+
+  border-radius: 10px;
+
+  transition: 0.4s ease;
+}
+
+/* HOVER UNDERLINE */
+
+.navLinks a:hover::after {
+  width: 100%;
+}
+
+/* ACTIVE PAGE */
+
+.navLinks a.active {
+  color: white;
+
+  font-weight: bold;
+}
+
+/* ACTIVE UNDERLINE */
+
+.navLinks a.active::after {
+  width: 100%;
+}
+
+/* CLICK EFFECT */
+
+.navLinks a:active {
+  transform: scale(0.95);
+}
+
+/* =========================
+   LOGOUT BUTTON
+========================= */
+
 .logout-btn {
+  position: relative;
+
   background: none;
   border: none;
 
@@ -120,8 +211,44 @@
   transition: 0.3s ease;
 }
 
+/* HOVER */
+
 .logout-btn:hover {
   color: white;
+
+  transform: translateY(-2px);
+}
+
+/* UNDERLINE */
+
+.logout-btn::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -5px;
+
+  width: 0%;
+  height: 2px;
+
+  background: white;
+
+  border-radius: 10px;
+
+  transition: 0.4s ease;
+}
+
+/* SHOW UNDERLINE */
+
+.logout-btn:hover::after {
+  width: 100%;
+}
+
+/* CLICK EFFECT */
+
+.logout-btn:active {
+  transform: scale(0.95);
 }
 
 /* =========================
