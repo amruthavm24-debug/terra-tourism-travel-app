@@ -76,6 +76,11 @@
   background: rgba(255,255,255,0.95);
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
   box-sizing: border-box;
+  color: black;
+}
+
+.search-box input::placeholder {
+  color: gray;
 }
 
 .search-btn {
